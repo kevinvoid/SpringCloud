@@ -1,0 +1,19 @@
+spring.application.name=config-server
+server.port=7001
+
+spring.cloud.config.server.git.url=
+spring.cloud.config
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          url:
+          search-paths:
+          username:
+          password:
+server:
+  port: 7001
