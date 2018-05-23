@@ -7,7 +7,25 @@ spring:
     name: gateway
 server:
   port: 8084
+
+#访问api-b   http://localhost:8084/service/greet1?name=kevin  http://localhost:8084/service/service
+
 zuul:
+  # 过滤匹配到http://localhost:port/service/**的请求，不做路由
+  #ignored-patterns: /service/**
+  # ignored-services
+  #ignored-services: /service/**
   routes:
-    service: /service/**
-    service2: /service2/**
+    # 服务路由设置
+    #service: /service/**
+    #service2: /service2/**
+
+    #传统路由配置
+    #api-a:
+      #path:/**
+      #url:http://localhost:8082/service
+    #拦截到/service/**的请求，重定向到service/**
+    #api-b:
+      #path:/service/**
+      #serviceId:service
+

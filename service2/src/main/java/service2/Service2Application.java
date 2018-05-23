@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class Service2Application {
     @RequestMapping("/service2")
     public String service2(){
-        return "service2";
+        return "service23";
     }
 
     public static void main(String[] args) {
         SpringApplication.run(Service2Application.class, args);
     }
 }
+
+
