@@ -1,9 +1,3 @@
-spring.application.name=config-server
-server.port=7001
-
-spring.cloud.config.server.git.url=
-spring.cloud.config
-
 spring:
   application:
     name: config-server
@@ -11,9 +5,9 @@ spring:
     config:
       server:
         git:
-          url:
-          search-paths:
-          username:
-          password:
+          uri: https://github.com/kevinvoid/SpringCloud
+          search-paths: /config-server/config-repo
+          username: kevin
+          password: yangpingan888@163.com
 server:
   port: 7001
